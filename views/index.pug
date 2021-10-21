@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  h1 Enter Your Words
+  form(method="POST" action="/story" id="words")
+    label(for="noun1") Noun:
+    input(type="text" name="noun1" id="noun1")
+    br
+    label(for="noun2") Another Noun:
+    input(type="text" name="noun2" id="noun2")
+    br
+    label(for="name1") Another Noun:
+    input(type="text" name="name1" id="name1")
+    br
+    label(for="room1") Room:
+    input(type="text" name="room1" id="room1")
+    br
+    label(for= "verb1") Verb:
+    input(type="text" name="verb1" id="verb1")
+    br
+    label(for= "verb2") Another Verb:
+    input(type="text" name="verb2" id="verb2")
+    br
+    label(for="adjective1") Adjective:
+    input(type="text" name="adjective1" id="adjective1")
+    br
+    label(for="adjective2") Another Adjective:
+    input(type="text" name="adjective2" id="adjective2")
+    br
+    label(for="Holiday") Holiday:
+    input(type="text" name="Holiday" id="Holiday")
+    br
+    label(for="place") Place:
+    input(type="text" name="place" id="place")
+    br
+    label(for="person") Person:
+    input(type="text" name="person" id="person")
+    br
+    label(for="familyRelation") Family Relation:
+    input(type="text" name="familyRelation" id="familyRelation")
+    br
+
+    label(for="storyChoice") Choose One
+    select(form="words" name="storyChoice" id="storyChoice")
+      option(value = "1") Story 1
+      option(value = "2") Story 2
+      option(value = "3") Story 3
+      option(value = "4") Random
+    br
+    button(type="submit" form="words") Tell Me a Story
